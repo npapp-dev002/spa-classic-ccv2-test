@@ -8,7 +8,7 @@
     "build:my-spartacus-app-standalone": "ng build && mv dist/apps/my-spartacus-app-standalone/server/server.mjs dist/apps/my-spartacus-app-standalone/server/spa.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:my-spartacus-app-standalone": "node dist/my-spartacus-app-standalone/server/server.mjs",
+    "serve:ssr:my-spartacus-app-standalone": "node dist/apps/my-spartacus-app-standalone/server/spa.mjs",
     "build:ssr": "ng build"
   },
   "prettier": {
