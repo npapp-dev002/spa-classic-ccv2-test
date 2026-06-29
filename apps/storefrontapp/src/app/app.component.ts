@@ -1,9 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { StorefrontComponent } from "@spartacus/storefront";
+import { StorefrontComponentModule } from "@spartacus/storefront";
 
 @Component({
   selector: 'app-root',
-  imports: [StorefrontComponent],
+  imports: [StorefrontComponentModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
