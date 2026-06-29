@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:my-spartacus-app-standalone": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:my-spartacus-app-standalone": "node dist/my-spartacus-app-standalone/server/server.mjs",
