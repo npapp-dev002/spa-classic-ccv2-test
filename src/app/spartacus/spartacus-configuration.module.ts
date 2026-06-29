@@ -10,7 +10,7 @@ import { defaultCmsContentProviders, layoutConfigFactory, mediaConfig } from "@s
   providers: [provideConfigFactory(layoutConfigFactory), provideConfig(mediaConfig), ...defaultCmsContentProviders, provideConfig(<OccConfig>{
     backend: {
       occ: {
-        baseUrl: 'https://localhost:9002',
+        baseUrl: 'https://api.cc3ihxtp03-mcpacppoc1-p3-public.model-t.myhybris.cloud',
       }
     },
   }), provideConfig(<SiteContextConfig>{
