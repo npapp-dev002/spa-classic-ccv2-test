@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "my-spartacus-app-standalone": {
+    "storefrontapp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -38,24 +38,24 @@
           "typeSeparator": "."
         }
       },
-      "root": "",
-      "sourceRoot": "src",
+      "root": "apps/storefrontapp",
+      "sourceRoot": "apps/storefrontapp/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular/build:application",
           "options": {
-            "outputPath": "./dist/apps/my-spartacus-app-standalone",
-            "browser": "src/main.ts",
+            "outputPath": "./dist/apps/storefrontapp",
+            "browser": "apps/storefrontapp/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "tsconfig.app.json",
+            "tsConfig": "apps/storefrontapp/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "apps/storefrontapp/public"
               },
               {
                 "glob": "**/*",
@@ -64,14 +64,14 @@
               }
             ],
             "styles": [
-              "src/styles.scss",
-              "src/styles/spartacus/user.scss",
-              "src/styles/spartacus/cart.scss",
-              "src/styles/spartacus/order.scss",
-              "src/styles/spartacus/checkout.scss",
-              "src/styles/spartacus/storefinder.scss",
-              "src/styles/spartacus/asm.scss",
-              "src/styles/spartacus/product.scss"
+              "apps/storefrontapp/src/styles.scss",
+              "apps/storefrontapp/src/styles/spartacus/user.scss",
+              "apps/storefrontapp/src/styles/spartacus/cart.scss",
+              "apps/storefrontapp/src/styles/spartacus/order.scss",
+              "apps/storefrontapp/src/styles/spartacus/checkout.scss",
+              "apps/storefrontapp/src/styles/spartacus/storefinder.scss",
+              "apps/storefrontapp/src/styles/spartacus/asm.scss",
+              "apps/storefrontapp/src/styles/spartacus/product.scss"
             ],
             "stylePreprocessorOptions": {
               "includePaths": [
@@ -83,12 +83,12 @@
                 ]
               }
             },
-            "server": "src/main.server.ts",
+            "server": "apps/storefrontapp/src/main.server.ts",
             "security": {
               "allowedHosts": []
             },
             "ssr": {
-              "entry": "src/server.ts"
+              "entry": "apps/storefrontapp/src/server.ts"
             },
             "prerender": false
           },
@@ -124,10 +124,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "my-spartacus-app-standalone:build:production,noSsr"
+              "buildTarget": "storefrontapp:build:production,noSsr"
             },
             "development": {
-              "buildTarget": "my-spartacus-app-standalone:build:development,noSsr"
+              "buildTarget": "storefrontapp:build:development,noSsr"
             }
           },
           "defaultConfiguration": "development"
@@ -135,6 +135,7 @@
         "test": {
           "builder": "@angular/build:unit-test",
           "options": {
+            "tsConfig": "apps/storefrontapp/tsconfig.spec.json",
             "stylePreprocessorOptions": {
               "includePaths": [
                 "node_modules/"
@@ -146,13 +147,13 @@
               }
             },
             "styles": [
-              "src/styles/spartacus/user.scss",
-              "src/styles/spartacus/cart.scss",
-              "src/styles/spartacus/order.scss",
-              "src/styles/spartacus/checkout.scss",
-              "src/styles/spartacus/storefinder.scss",
-              "src/styles/spartacus/asm.scss",
-              "src/styles/spartacus/product.scss"
+              "apps/storefrontapp/src/styles/spartacus/user.scss",
+              "apps/storefrontapp/src/styles/spartacus/cart.scss",
+              "apps/storefrontapp/src/styles/spartacus/order.scss",
+              "apps/storefrontapp/src/styles/spartacus/checkout.scss",
+              "apps/storefrontapp/src/styles/spartacus/storefinder.scss",
+              "apps/storefrontapp/src/styles/spartacus/asm.scss",
+              "apps/storefrontapp/src/styles/spartacus/product.scss"
             ],
             "assets": [
               {
