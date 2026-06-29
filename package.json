@@ -4,12 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "build:my-spartacus-app-standalone": "ng build && mv dist/apps/my-spartacus-app-standalone/server/server.mjs dist/apps/my-spartacus-app-standalone/server/spa.mjs",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:my-spartacus-app-standalone": "node dist/apps/my-spartacus-app-standalone/server/spa.mjs",
-    "build:ssr": "ng build"
+    "build": "ng build storefrontapp",
+    "build:storefrontapp": "ng build storefrontapp && mv dist/apps/storefrontapp/server/server.mjs dist/apps/storefrontapp/server/spa.mjs",
+    "watch": "ng build storefrontapp --watch --configuration development",
+    "test": "ng test storefrontapp",
+    "serve:ssr:storefrontapp": "node dist/apps/storefrontapp/server/spa.mjs",
+    "build:ssr": "ng build storefrontapp"
   },
   "prettier": {
     "printWidth": 100,
